@@ -1,0 +1,103 @@
+/*Import font styles from google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Calligraffitti&family=Lato&display=swap');
+
+
+/*BELOW HERE IS THE CODING FOR THE PORTFOLIO PART*/
+.portBody {
+    background-color: #FBAB7E;
+    background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.PortfolioHead {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-family: 'Calligraffitti', cursive;
+    text-align: center;
+    font-size: 3rem;
+    color: #0583e39a;
+}
+
+/* The grid that contains a portfolio of photos */
+.portfolio {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(282px, 1fr));
+    box-sizing: border box;
+    grid-gap: 0.1rem;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+
+
+}
+
+/* The image container*/
+.testImage {
+    position: relative;
+    margin: 0.3rem 0.3rem 0.3rem 0.3rem;
+}
+
+/* The actual image itself. Takes up all the space in the image container */
+.image__img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+/* The attributes of the image's hover layout */
+.image__overlay {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    display: flex;
+    /*Horizontally and Vertically align the text*/
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.25s;
+    border-radius: 20px;
+
+}
+
+/*Part of the image overlay transition animation*/
+.image__overlay>* {
+    transform: translateY(20px);
+    transition: transform 0.25s;
+}
+
+/* Overlay is present when a picture is hovered over */
+.image__overlay:hover {
+    opacity: 1;
+
+}
+
+/*Part of the image overlay transition animation*/
+.image__overlay:hover>* {
+    transform: translateY(0);
+}
+
+/*The image's title within the overlay*/
+.image__title {
+    font-size: 1.1em;
+    padding-bottom: 10px;
+    font-weight: bold;
+}
+
+/*The image's description within the overlay*/
+.image__description {
+    font-size: 0.85em;
+    margin-top: 0.25em;
+}
