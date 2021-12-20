@@ -1,0 +1,306 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Calligraffitti&family=Lato&display=swap');
+
+/*Default attributes for all of the pages*/
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    /* background: rgb(255, 255, 255); */
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+    background-color: white;
+
+}
+
+/*NAVIGATION BAR CODE BELOW*/
+nav {
+    background: rgb(32, 34, 38);
+    padding: 0 15px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.nav__links {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__links li a {
+    display: block;
+    padding: 15px 5px;
+}
+
+.logo {
+    pointer-events: none;
+    font-size: 20px;
+    padding: 7.5px 10px 7.5px 0;
+}
+
+.menuItem {
+    padding: 5px;
+    order: 2;
+    width: 100%;
+    text-align: center;
+    display: none;
+
+}
+
+.menuItem:hover {
+    background-color: #3b7cf5;
+}
+
+.toggle {
+    order: 1;
+    font-size: 20px;
+}
+
+@media all and (min-width: 920px) {
+    .menuItem {
+        order: 1;
+        position: relative;
+        display: block;
+        width: auto;
+
+
+    }
+
+    .toggle {
+        display: none;
+    }
+
+    /*Page check*/
+    #contactCheck {
+        border-bottom: solid 1px #ffffff;
+        margin-bottom: 2px;
+
+    }
+
+    #homeCheck {
+        border-bottom: solid 1px #ffffff;
+        margin-bottom: 2px;
+    }
+
+    #aboutMeCheck {
+        border-bottom: solid 1px #ffffff;
+        margin-bottom: 2px;
+    }
+
+    #portfolioCheck {
+        border-bottom: solid 1px #ffffff;
+        margin-bottom: 2px;
+    }
+
+    #servicesCheck {
+        border-bottom: solid 1px #ffffff;
+        margin-bottom: 2px;
+    }
+
+    #testimonialsCheck {
+        border-bottom: solid 1px #ffffff;
+        margin-bottom: 2px;
+    }
+
+    #workCheck {
+        border-bottom: solid 1px #ffffff;
+        margin-bottom: 2px;
+    }
+
+
+}
+
+@media all and (max-width: 919px) {
+    .menuItem {
+        border-top: 1px solid rgb(185, 185, 185);
+
+    }
+
+    .active .menuItem {
+        display: block;
+    }
+}
+/* FOOTER CODE BELOW */
+
+footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    /* background: rgb(32, 34, 38); */
+    background: #111;
+    height: auto;
+    width: 100vw;
+    font-family: "Open Sans";
+    padding-top: 40px;
+    color: #fff;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.footer-content h3 {
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 3rem;
+}
+
+.footer-content p {
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 14px;
+}
+
+.socials {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;
+}
+
+.socials li {
+    margin: 0 10px;
+}
+
+.socials a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.74);
+}
+
+.socials a i {
+    font-size: 2.1rem;
+    transition: color .4s ease;
+
+}
+
+.socials a:hover i {
+    color: burlywood;
+}
+
+.footer-bottom {
+    background: #000;
+    width: 100vw;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-bottom p {
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+}
+
+/*BELOW HERE IS THE CODING FOR THE PORTFOLIO PART*/
+.portBody {
+    background-color: #FBAB7E;
+    background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.PortfolioHead {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-family: 'Calligraffitti', cursive;
+    text-align: center;
+    font-size: 3rem;
+    color: #0583e39a;
+}
+
+/* The grid that contains a portfolio of photos */
+.portfolio {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(282px, 1fr));
+    box-sizing: border box;
+    grid-gap: 0.1rem;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+
+
+}
+
+/* The image container*/
+.testImage {
+    position: relative;
+    margin: 0.3rem 0.3rem 0.3rem 0.3rem;
+}
+
+/* The actual image itself. Takes up all the space in the image container */
+.image__img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+/* The attributes of the image's hover layout */
+.image__overlay {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    display: flex;
+    /*Horizontally and Vertically align the text*/
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.25s;
+    border-radius: 20px;
+
+}
+
+/*Part of the image overlay transition animation*/
+.image__overlay>* {
+    transform: translateY(20px);
+    transition: transform 0.25s;
+}
+
+/* Overlay is present when a picture is hovered over */
+.image__overlay:hover {
+    opacity: 1;
+
+}
+
+/*Part of the image overlay transition animation*/
+.image__overlay:hover>* {
+    transform: translateY(0);
+}
+
+/*The image's title within the overlay*/
+.image__title {
+    font-size: 1.1em;
+    padding-bottom: 10px;
+    font-weight: bold;
+}
+
+/*The image's description within the overlay*/
+.image__description {
+    font-size: 0.85em;
+    margin-top: 0.25em;
+}
